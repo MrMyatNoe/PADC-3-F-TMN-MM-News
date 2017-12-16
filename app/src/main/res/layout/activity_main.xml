@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.myanmar.tmn.news.activities.MainActivity">
+    tools:context="com.myanmar.tmn.news.activities.MainActivity"
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -23,12 +24,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fitsSystemWindows="true">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_news"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton

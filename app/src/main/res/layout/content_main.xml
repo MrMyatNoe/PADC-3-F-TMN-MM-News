@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.myanmar.tmn.padc_3_f_tmn_mm_news.com.myanmar.tmn.news.MainActivity"
+    tools:context="com.myanmar.tmn.news.activities.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
