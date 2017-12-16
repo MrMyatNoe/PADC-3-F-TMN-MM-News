@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("Action", null).show();
     }
 
-    @OnClick(R.id.rv_news)
+    /*@OnClick(R.id.rv_news)
     public void onClickCard(View view){
         Intent intent = NewsDetailsActivity.newDetailsIntent(getApplicationContext());
         startActivity(intent);
-    }
+    }*/
 }
