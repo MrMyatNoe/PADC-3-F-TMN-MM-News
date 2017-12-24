@@ -54,7 +54,7 @@
     android:tint="@color/primary" />
 
     <TextView
-    android:id="@+id/tv_news-brief"
+    android:id="@+id/tv_news_brief"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@id/iv_publication_logo"
@@ -71,7 +71,7 @@
     android:id="@+id/img_news_bunny"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@id/tv_news-brief"
+    android:layout_below="@id/tv_news_brief"
     android:src="@drawable/img_news_dummy" />
 
     <TextView

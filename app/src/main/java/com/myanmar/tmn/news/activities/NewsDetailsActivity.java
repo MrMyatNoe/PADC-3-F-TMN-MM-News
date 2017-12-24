@@ -29,10 +29,10 @@ public class NewsDetailsActivity extends AppCompatActivity {
 
     private ImagesInNewsDetailsAdapter imagesInNewsDetailsAdapter;
 
-    public static Intent newDetailsIntent(Context context){
+    /*public static Intent newDetailsIntent(Context context){
         Intent intent = new Intent(context,NewsDetailsActivity.class);
         return intent;
-    }
+    }*/
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
