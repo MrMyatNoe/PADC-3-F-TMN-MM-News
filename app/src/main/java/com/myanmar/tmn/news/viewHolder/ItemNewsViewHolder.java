@@ -46,7 +46,6 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     public ItemNewsViewHolder(View itemView, NewsActionDelegate newsActionDelegate) {
         super(itemView);
         ButterKnife.bind(this,itemView);
-
         actionDelegate = newsActionDelegate;
     }
 
@@ -57,7 +56,7 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     }
 
     //add for one view
-    public void setNews(NewsVO news){
+    public void setNews(NewsVO news) {
         publicationTitle.setText(news.getPublicationVO().getTitle());
         postedDate.setText(news.getPostedDate());
         newsBrief.setText(news.getBrief());
@@ -65,8 +64,12 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
         Glide.with(publicationLogo.getContext()).load(news.getPublicationVO().getLogo())
                 .into(publicationLogo);
 
-        if (news.getImages() != null){
+        if (news.getImages() != null) {
+            newsBunny.setVisibility(View.VISIBLE);
             Glide.with(newsBunny.getContext()).load(news.getImages().get(0)).into(newsBunny);
+
+        } else {
+            newsBunny.setVisibility(View.GONE);
         }
     }
 }

@@ -55,7 +55,6 @@ public class HttpUrlConnectionDataAgent implements NewsDataAgent {
     }
     @Override
     public void loadNews() {
-
         Log.d("","log in main thread!");
         new AsyncTask<Void,Void,Void>(){
 
@@ -113,10 +112,11 @@ public class HttpUrlConnectionDataAgent implements NewsDataAgent {
 
                     //build GSON object
                     Gson gson = new Gson();
+                    //return from api type
                     GetNewsResponse getNewsResponse = gson.fromJson(responseString, GetNewsResponse.class);
                     Log.d(MMNewsApp.LOG_CAT,"size " + getNewsResponse.getMmNews().size());
 
-                    //EventBus
+                    //EventBus for broadcast
                     EventBus.getDefault().post(new LoadedNewsEvent(getNewsResponse.getMmNews()));
                 } catch (Exception e) {
                     /*

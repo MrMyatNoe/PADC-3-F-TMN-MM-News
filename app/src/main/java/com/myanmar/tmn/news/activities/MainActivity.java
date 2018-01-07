@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements NewsActionDelegat
 
     private NewsAdapter newsAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

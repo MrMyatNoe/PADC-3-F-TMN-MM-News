@@ -2,6 +2,10 @@ package com.myanmar.tmn.news.data.models;
 
 import com.myanmar.tmn.news.network.HttpUrlConnectionDataAgent;
 import com.myanmar.tmn.news.network.NewsDataAgent;
+import com.myanmar.tmn.news.network.OKHttpDataAgent;
+import com.myanmar.tmn.news.network.RetrofitDataAgent;
+
+import retrofit2.Retrofit;
 
 /**
  * Created by msi on 12/23/2017.
@@ -13,7 +17,9 @@ public class NewsModel {
     private NewsDataAgent mDataAgent;
 
     private NewsModel() {
-        mDataAgent = HttpUrlConnectionDataAgent.getsObjectInstance();
+        //mDataAgent = HttpUrlConnectionDataAgent.getsObjectInstance();
+        //mDataAgent = OKHttpDataAgent.getsObjectInstance();
+        mDataAgent = RetrofitDataAgent.getsObjectInstance();
     }
 
     public static NewsModel getsObjectInstance() {
