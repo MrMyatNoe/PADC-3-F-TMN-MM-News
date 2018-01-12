@@ -34,9 +34,9 @@ public class NewsByCategoryFragment extends Fragment implements NewsActionDelega
 
 
     @BindView(R.id.rv_news)
-    RecyclerView rvNews;
+    RecyclerView rvNewsByCategory;
 
-    private NewsAdapter newsAdapter;
+    NewsAdapter newsAdapter;
 
     @Nullable
     @Override
@@ -46,10 +46,12 @@ public class NewsByCategoryFragment extends Fragment implements NewsActionDelega
         ButterKnife.bind(this,view);
 
         LinearLayoutManager newsLayoutManager = new LinearLayoutManager(getContext(),
-                LinearLayoutManager.VERTICAL,false);
-        rvNews.setLayoutManager(newsLayoutManager);
+                LinearLayoutManager.VERTICAL,true);
+        rvNewsByCategory.setLayoutManager(newsLayoutManager);
+
         newsAdapter = new NewsAdapter(this);
-        rvNews.setAdapter(newsAdapter);
+        rvNewsByCategory.setAdapter(newsAdapter);
+
         NewsModel.getsObjectInstance().loadNews();
         return view;
     }
@@ -87,8 +89,8 @@ public class NewsByCategoryFragment extends Fragment implements NewsActionDelega
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onLoadedNews(LoadedNewsEvent event){
-        Log.d(MMNewsApp.LOG_CAT,"news loaded");
+    public void onNewsLoaded(LoadedNewsEvent event){
+        Log.d(MMNewsApp.LOG_CAT,"onNewsLoaded " + event.getNewsList().size());
         newsAdapter.setNews(event.getNewsList());
     }
 }

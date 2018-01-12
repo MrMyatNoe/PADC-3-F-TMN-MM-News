@@ -22,4 +22,15 @@
         ပို့ဆောင်နှုတ်ဆက်ခဲ့ကြကြောင်း သိရသည်။
     </string>
     <string name="titleNewsByCategory">News By Category</string>
+    <string name="topNews">Top News</string>
+    <string name="sportsTitle">One Football</string>
+    <string name="topNewsBrief">Chelsea 0 Arsenal 0: Stamford Bridge stalemate leaves EFL Cup
+        semi-final poised</string>
+    <string name="popularNewsBrief">Real Madrid 2 Numancia 2(5-2 agg): Guillermo double deepens
+        Zidane's woes despite Copa progression</string>
+    <string name="internationalTitle">Brexit:penalising UK banks \'will pose financial risk to EU'
+    </string>
+    <string name="internationalTopic">UK aid firms/ Millions in EU \n funds may be lost if no deal
+        agreed</string>
+    <string name="internationalOtherTopic">Nuclear weapons / US to loosen policy and develop more \'usable' warheads"</string>
 </resources>

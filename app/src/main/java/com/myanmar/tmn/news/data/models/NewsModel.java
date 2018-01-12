@@ -16,6 +16,9 @@ public class NewsModel {
     private static NewsModel sObjectInstance;
     private NewsDataAgent mDataAgent;
 
+    /**
+     * load data agent call
+     */
     private NewsModel() {
         //mDataAgent = HttpUrlConnectionDataAgent.getsObjectInstance();
         //mDataAgent = OKHttpDataAgent.getsObjectInstance();
