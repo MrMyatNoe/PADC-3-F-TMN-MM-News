@@ -10,4 +10,5 @@ public interface NewsDataAgent {
      * load news from internet
      */
     void loadNews();
+    void LoginUser(String phone, String password);
 }

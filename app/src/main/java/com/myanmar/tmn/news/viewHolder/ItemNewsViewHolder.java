@@ -14,6 +14,8 @@ import com.myanmar.tmn.news.activities.MainActivity;
 import com.myanmar.tmn.news.data.vo.NewsVO;
 import com.myanmar.tmn.news.delegates.NewsActionDelegate;
 
+import java.util.List;
+
 import javax.microedition.khronos.opengles.GL;
 
 import butterknife.BindView;
@@ -41,6 +43,8 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.img_news_bunny)
     ImageView newsBunny;
 
+    private NewsVO mNews;
+
     private NewsActionDelegate actionDelegate;
 
     public ItemNewsViewHolder(View itemView, NewsActionDelegate newsActionDelegate) {
@@ -52,11 +56,12 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     @OnClick(R.id.cv_news_items_root)
     public void onClick(View view){
        // Toast.makeText(view.getContext(),"Hello",Toast.LENGTH_SHORT).show();
-        actionDelegate.onTapNewsItem();
+        actionDelegate.onTapNewsItem(mNews);
     }
 
     //add for one view
     public void setNews(NewsVO news) {
+        mNews = news;
         publicationTitle.setText(news.getPublicationVO().getTitle());
         postedDate.setText(news.getPostedDate());
         newsBrief.setText(news.getBrief());

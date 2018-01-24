@@ -140,6 +140,11 @@ public class HttpUrlConnectionDataAgent implements NewsDataAgent {
         }.execute();
     }
 
+    @Override
+    public void LoginUser(String email, String password) {
+
+    }
+
     //for request parameter
     private String getQuery(List<NameValuePair> params) throws UnsupportedEncodingException {
         StringBuilder result = new StringBuilder();

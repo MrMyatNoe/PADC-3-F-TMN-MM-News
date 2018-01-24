@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.myanmar.tmn.news.viewPod.BeforeLoginUserViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/userViewPod"
+    android:background="@drawable/drawer_background">
+
+    <net.aungpyaephyo.mmtextview.components.MMButton
+        android:id="@+id/btn_user_login"
+        style="@style/accentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_register"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:text="@string/login"
+        android:textSize="12sp" />
+
+    <net.aungpyaephyo.mmtextview.components.MMButton
+        android:id="@+id/btn_register"
+        style="@style/accentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:paddingLeft="@dimen/margin_medium_2"
+        android:paddingRight="@dimen/margin_medium_2"
+        android:text="@string/register"
+        android:textSize="12sp" />
+</com.myanmar.tmn.news.viewPod.BeforeLoginUserViewPod>

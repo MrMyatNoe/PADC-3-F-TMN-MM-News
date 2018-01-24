@@ -1,5 +1,7 @@
 package com.myanmar.tmn.news.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -9,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 
 import com.myanmar.tmn.news.MMNewsApp;
 import com.myanmar.tmn.news.R;
@@ -44,6 +47,11 @@ public class NewsByCategoryActivity extends AppCompatActivity {
     TabLayout tabLayoutNewsCategory;
 
     NewsByCategoryAdapter newsByCategoryAdapter;
+
+    public static Intent newIntent(Context context) {
+        Intent intent = new Intent(context, NewsByCategoryActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,5 +90,11 @@ public class NewsByCategoryActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

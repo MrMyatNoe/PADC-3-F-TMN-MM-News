@@ -32,5 +32,15 @@
     </string>
     <string name="internationalTopic">UK aid firms/ Millions in EU \n funds may be lost if no deal
         agreed</string>
-    <string name="internationalOtherTopic">Nuclear weapons / US to loosen policy and develop more \'usable' warheads"</string>
+    <string name="internationalOtherTopic">Nuclear weapons / US to loosen policy and develop more
+        \'usable' warheads"</string>
+    <string name="menuAllNews">All news</string>
+    <string name="menuNewsByCategory">News By Category</string>
+    <string name="allNews">All News</string>
+    <string name="login">Login ၀င်ရန်</string>
+    <string name="register">Register လုပ်ရန်</string>
+    <string name="btn_forgot_password"><u><i>ပတ်စ်၀တ်မေ့နေလို့?</i></u></string>
+    <string name="btn_seller"><u><i>အသစ်လား ? Register လုပ်လိုက်အုး</i></u></string>
+    <string name="btn_login"><u><i>Login ၀င်မဃ်!</i></u></string>
+    <string name="btn_logout"><u><i>Logout မဃ်!</i></u></string>
 </resources>

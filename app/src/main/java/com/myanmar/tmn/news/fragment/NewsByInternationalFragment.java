@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.myanmar.tmn.news.R;
 import com.myanmar.tmn.news.adapter.ItemsInternationalNewsAdapter;
+import com.myanmar.tmn.news.adapter.ItemsMainNewsAdapter;
 import com.myanmar.tmn.news.adapter.OtherInternationalNewsAdapter;
 
 import butterknife.BindView;
@@ -24,15 +25,16 @@ import butterknife.ButterKnife;
 
 public class NewsByInternationalFragment extends Fragment {
 
-    @BindView(R.id.rv_international_news_topic)
+    @BindView(R.id.rv_international_news)
     RecyclerView rvInternationalNews;
 
-    private ItemsInternationalNewsAdapter itemsInternationalNewsAdapter;
+    private ItemsMainNewsAdapter itemsMainNewsAdapter;
 
     /*@BindView(R.id.rv_first_international_news)
     RecyclerView rvFirstInternationalNews;*/
 
-    private OtherInternationalNewsAdapter otherInternationalNewsAdapter;
+
+    //private OtherInternationalNewsAdapter otherInternationalNewsAdapter;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -41,11 +43,11 @@ public class NewsByInternationalFragment extends Fragment {
                 false);
         ButterKnife.bind(this,view);
 
-        itemsInternationalNewsAdapter = new ItemsInternationalNewsAdapter();
-        LinearLayoutManager internationalNewsManager = new LinearLayoutManager(getContext(),
-                LinearLayoutManager.HORIZONTAL,false);
-        rvInternationalNews.setLayoutManager(internationalNewsManager);
-        rvInternationalNews.setAdapter(itemsInternationalNewsAdapter);
+        itemsMainNewsAdapter = new ItemsMainNewsAdapter();
+        LinearLayoutManager itemsMainNewsManager = new LinearLayoutManager(getContext(),
+                LinearLayoutManager.VERTICAL,false);
+        rvInternationalNews.setLayoutManager(itemsMainNewsManager);
+        rvInternationalNews.setAdapter(itemsMainNewsAdapter);
 
        /* otherInternationalNewsAdapter = new OtherInternationalNewsAdapter();
         LinearLayoutManager otherInternationalNewsManager = new LinearLayoutManager(getContext()

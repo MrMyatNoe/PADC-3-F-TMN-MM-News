@@ -1,7 +1,9 @@
 package com.myanmar.tmn.news.network;
 
 import com.google.gson.Gson;
+import com.myanmar.tmn.news.event.SuccessLoginEvent;
 import com.myanmar.tmn.news.event.LoadedNewsEvent;
+import com.myanmar.tmn.news.network.responses.GetLoginResponse;
 import com.myanmar.tmn.news.network.responses.GetNewsResponse;
 
 import org.greenrobot.eventbus.EventBus;
@@ -49,6 +51,7 @@ public class RetrofitDataAgent implements NewsDataAgent {
 
     /**
      * singleton for retrofit
+     *
      * @return
      */
     public static RetrofitDataAgent getsObjectInstance() {
@@ -70,7 +73,7 @@ public class RetrofitDataAgent implements NewsDataAgent {
             @Override
             public void onResponse(Call<GetNewsResponse> call, Response<GetNewsResponse> response) {
                 GetNewsResponse getNewsResponse = response.body();
-                if (getNewsResponse != null){
+                if (getNewsResponse != null) {
                     LoadedNewsEvent loadedNewsEvent = new LoadedNewsEvent(getNewsResponse.
                             getMmNews());
                     EventBus.getDefault().post(loadedNewsEvent);
@@ -79,6 +82,27 @@ public class RetrofitDataAgent implements NewsDataAgent {
 
             @Override
             public void onFailure(Call<GetNewsResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    @Override
+    public void LoginUser(String phone, String password) {
+        Call<GetLoginResponse> getLoginResponseCall = newsApi.getLogin(phone,
+                password);
+
+        getLoginResponseCall.enqueue(new Callback<GetLoginResponse>() {
+            @Override
+            public void onResponse(Call<GetLoginResponse> call, Response<GetLoginResponse> response) {
+                GetLoginResponse getLoginResponse = response.body();
+                if (getLoginResponse != null) {
+                    EventBus.getDefault().post(new SuccessLoginEvent(getLoginResponse.getLoginUser()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetLoginResponse> call, Throwable t) {
 
             }
         });

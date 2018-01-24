@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.myanmar.tmn.news.viewPod.LoginUserViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/userViewPod">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/drawer_background"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/iv_login_user_image"
+        android:layout_width="@dimen/regularUserWidth"
+        android:layout_height="@dimen/regularUserHeight"
+        android:src="@drawable/dummy_user_picture"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_2"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thet Myat Noe"
+        android:layout_below="@id/iv_login_user_image"
+        android:layout_alignLeft="@id/iv_login_user_image"
+        android:textColor="@color/white_full"
+        android:textSize="@dimen/text_regular" />
+
+    <TextView
+        android:id="@+id/tv_user_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09979599035"
+        android:layout_below="@id/tv_name"
+        android:layout_alignLeft="@id/iv_login_user_image"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/white_full"
+        android:textSize="@dimen/text_regular"/>
+
+    <Button
+        android:id="@+id/btn_log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_logout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        style="@style/accentButton"/>
+
+
+</com.myanmar.tmn.news.viewPod.LoginUserViewPod>

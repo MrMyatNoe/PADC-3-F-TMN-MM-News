@@ -16,7 +16,7 @@ public class OtherInternationalNewsAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View items = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.items_other_international_news,parent,false);
+                .inflate(R.layout.items_international_news,parent,false);
         ItemsInternationalNewsViewHolder itemsInternationalNewsViewHolder = new ItemsInternationalNewsViewHolder(items);
         return itemsInternationalNewsViewHolder;
     }

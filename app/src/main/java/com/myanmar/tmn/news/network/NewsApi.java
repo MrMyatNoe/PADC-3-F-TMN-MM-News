@@ -1,5 +1,6 @@
 package com.myanmar.tmn.news.network;
 
+import com.myanmar.tmn.news.network.responses.GetLoginResponse;
 import com.myanmar.tmn.news.network.responses.GetNewsResponse;
 
 import retrofit2.Call;
@@ -19,4 +20,10 @@ public interface NewsApi {
     @POST("getMMNews.php")
     Call<GetNewsResponse> getNews(@Field("page") int page,
                                   @Field("access_token") String accessToken);
+
+
+    @FormUrlEncoded
+    @POST("login.php")
+    Call<GetLoginResponse> getLogin(@Field("phoneNo") String phone,
+                                    @Field("password") String password);
 }

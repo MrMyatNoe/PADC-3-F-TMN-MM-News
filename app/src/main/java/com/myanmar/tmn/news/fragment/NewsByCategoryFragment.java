@@ -16,6 +16,7 @@ import com.myanmar.tmn.news.MMNewsApp;
 import com.myanmar.tmn.news.R;
 import com.myanmar.tmn.news.adapter.NewsAdapter;
 import com.myanmar.tmn.news.data.models.NewsModel;
+import com.myanmar.tmn.news.data.vo.NewsVO;
 import com.myanmar.tmn.news.delegates.NewsActionDelegate;
 import com.myanmar.tmn.news.event.LoadedNewsEvent;
 
@@ -46,7 +47,7 @@ public class NewsByCategoryFragment extends Fragment implements NewsActionDelega
         ButterKnife.bind(this,view);
 
         LinearLayoutManager newsLayoutManager = new LinearLayoutManager(getContext(),
-                LinearLayoutManager.VERTICAL,true);
+                LinearLayoutManager.VERTICAL,false);
         rvNewsByCategory.setLayoutManager(newsLayoutManager);
 
         newsAdapter = new NewsAdapter(this);
@@ -69,7 +70,7 @@ public class NewsByCategoryFragment extends Fragment implements NewsActionDelega
     }
 
     @Override
-    public void onTapNewsItem() {
+    public void onTapNewsItem(NewsVO tappedNews) {
 
     }
 

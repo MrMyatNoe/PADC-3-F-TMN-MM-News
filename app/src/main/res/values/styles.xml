@@ -26,4 +26,9 @@
         <item name="android:shadowColor">@color/black_full</item>
     </style>
 
+    <style name="accentButton">
+        <item name="android:background">@color/accent</item>
+        <item name="android:paddingLeft">@dimen/margin_large</item>
+        <item name="android:paddingRight">@dimen/margin_large</item>
+    </style>
 </resources>

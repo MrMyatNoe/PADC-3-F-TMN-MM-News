@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cd_id"
@@ -90,7 +88,7 @@
                 android:id="@+id/iv_popular_sports_news_logo_one"
                 android:layout_width="110dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="8dp"
+                android:layout_margin="8dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_sports_news_topic_logo" />
 
@@ -115,9 +113,8 @@
                     android:id="@+id/tv_news_logo_in_popular_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:drawableLeft="@drawable/soccer_title"
                     android:drawablePadding="8dp"
                     android:text="@string/sportsTitle"
@@ -147,7 +144,7 @@
                 android:id="@+id/iv_popular_sports_news_logo_two"
                 android:layout_width="110dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="8dp"
+                android:layout_margin="8dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_sports_news_topic_logo" />
 
@@ -172,7 +169,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:drawableLeft="@drawable/soccer_title"
                     android:drawablePadding="8dp"
                     android:text="@string/sportsTitle"
@@ -202,7 +199,7 @@
                 android:id="@+id/iv_popular_sports_news_logo_three"
                 android:layout_width="110dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="8dp"
+                android:layout_margin="8dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_sports_news_topic_logo" />
 
@@ -227,7 +224,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:drawableLeft="@drawable/soccer_title"
                     android:drawablePadding="8dp"
                     android:text="@string/sportsTitle"
@@ -258,7 +255,7 @@
                 android:id="@+id/iv_popular_sports_news_logo_four"
                 android:layout_width="110dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="8dp"
+                android:layout_margin="8dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_sports_news_topic_logo" />
 
@@ -283,7 +280,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:drawableLeft="@drawable/soccer_title"
                     android:drawablePadding="8dp"
                     android:text="@string/sportsTitle"

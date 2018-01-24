@@ -5,7 +5,7 @@
     <application
         android:name=".MMNewsApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -15,6 +15,11 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.NewsDetailsActivity"
@@ -24,11 +29,7 @@
         <activity
             android:name=".activities.NewsByCategoryActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activities.SportsNewsActivity"
@@ -45,9 +46,17 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity
+            android:name=".activities.InternationalMainNewsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
+        </activity>
+
+        <activity android:name=".activities.AccountControlActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
-
 
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
