@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
  * Created by msi on 1/11/2018.
  */
 
-public class SportsNewsActivity extends AppCompatActivity {
+public class SportsNewsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

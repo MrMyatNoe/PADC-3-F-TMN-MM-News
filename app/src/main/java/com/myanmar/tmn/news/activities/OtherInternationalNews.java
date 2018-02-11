@@ -10,7 +10,7 @@ import com.myanmar.tmn.news.R;
  * Created by msi on 1/12/2018.
  */
 
-public class OtherInternationalNews extends AppCompatActivity {
+public class OtherInternationalNews extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

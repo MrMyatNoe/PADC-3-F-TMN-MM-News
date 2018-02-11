@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
  * Created by msi on 12/9/2017.
  */
 
-public class NewsDetailsActivity extends AppCompatActivity {
+public class NewsDetailsActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;

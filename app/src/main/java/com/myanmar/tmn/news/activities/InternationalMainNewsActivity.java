@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
  * Created by msi on 1/19/2018.
  */
 
-public class InternationalMainNewsActivity extends AppCompatActivity {
+public class InternationalMainNewsActivity extends BaseActivity {
 
     @BindView(R.id.rv_international_news_topic)
     RecyclerView rvInternationalNewsTopic;

@@ -20,6 +20,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by msi on 1/21/2018.
@@ -32,6 +33,8 @@ public class AccountControlViewPod extends FrameLayout {
 
     @BindView(R.id.vp_login_user)
     LoginUserViewPod vpLoginUser;
+
+    LoginUserDelegate mLoginUserDelegate;
 
     public AccountControlViewPod(@NonNull Context context) {
         super(context);
@@ -61,16 +64,22 @@ public class AccountControlViewPod extends FrameLayout {
 
     public void setDelegate(LoginUserDelegate loginDelegate){
             vpLoginUser.setDelegate(loginDelegate);
+            mLoginUserDelegate = loginDelegate;
     }
 
     public void refreshUserSession() {
-        if (LoginUserModel.getsObjectInstance().isLogin()) {
+        if (LoginUserModel.getsObjectInstance(getContext()).isLogin()) {
             vpBeforeLogin.setVisibility(View.GONE);
             vpLoginUser.setVisibility(View.VISIBLE);
         } else {
             vpBeforeLogin.setVisibility(View.VISIBLE);
             vpLoginUser.setVisibility(View.GONE);
         }
+    }
+
+    @OnClick(R.id.vp_login_user)
+    public void onTapLoginUser(View view){
+        mLoginUserDelegate.onTapLoginUser();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

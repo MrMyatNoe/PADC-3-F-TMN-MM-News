@@ -9,7 +9,16 @@ import com.myanmar.tmn.news.data.vo.NewsVO;
 public interface NewsActionDelegate {
 
     void onTapNewsItem(NewsVO tappedNews);
+
     void onTapCommentButton();
-    void onTapSendToButton();
+
+    void onTapSendToButton(NewsVO tappedNews);
+
     void onTapFavourite();
+
+    void onTapLikeUsers(NewsVO tappedNews);
+
+    void onTapCommentUsers(NewsVO tappedNews);
+
+    void onTapSentToUsers(NewsVO tappedNews);
 }

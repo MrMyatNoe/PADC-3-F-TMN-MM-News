@@ -1,135 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:net.aungpyaephyo="http://schemas.android.com/tools"
     android:id="@+id/cv_news_items_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="16dp"
     app:cardElevation="4dp">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-    android:id="@+id/iv_publication_logo"
-    android:layout_width="120dp"
-    android:layout_height="90dp"
-    android:src="@drawable/img_logo_dummy" />
-
-    <TextView
-    android:id="@+id/tv_publication_title"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_toRightOf="@id/iv_publication_logo"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="12dp"
-    android:text="Eleven Media"
-    android:textColor="@color/primary_text"
-    android:textSize="16sp" />
-
-    <TextView
-    android:id="@+id/tv_posted_date"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/tv_publication_title"
-    android:layout_toRightOf="@id/iv_publication_logo"
-    android:layout_alignLeft="@id/tv_publication_title"
-    android:layout_marginTop="4dp"
-    android:text="Posted At: Jan 01 - 6:30AM"
-    android:textColor="@color/secondary_text"
-    android:textSize="14sp" />
-
-    <ImageView
-    android:id="@+id/btn_fav"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_toRightOf="@id/tv_posted_date"
-    android:layout_margin="8dp"
-    android:layout_alignParentRight="true"
-    android:padding="8dp"
-    android:src="@drawable/ic_favorite_border_black_36dp"
-    android:tint="@color/primary" />
-
-    <net.aungpyaephyo.mmtextview.components.MMTextView
-    android:id="@+id/tv_news_brief"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/iv_publication_logo"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:text="@string/tv_news_details"
-    android:textColor="@color/primary_text"
-    android:textSize="14sp"
-    android:lineSpacingMultiplier="1.3"
-    android:maxLines="4"
-    android:ellipsize="end" />
-
-    <ImageView
-    android:id="@+id/img_news_bunny"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/tv_news_brief"
-    android:src="@drawable/img_news_dummy" />
-
-    <TextView
-    android:id="@+id/lbl_like"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/img_news_bunny"
-    android:layout_marginTop="8dp"
-    android:layout_marginLeft="8dp"
-    android:text="3 Likes - 3 Comments - Sent to 6 People"
-    android:textColor="@color/primary" />
-
-<LinearLayout
-    android:id="@+id/ll_user_action"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_below="@id/lbl_like"
-    android:layout_margin="8dp"
-    android:weightSum="2">
-
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp">
+        <ImageView
+            android:id="@+id/iv_publication_logo"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:src="@drawable/img_logo_dummy" />
 
         <TextView
-            android:id="@+id/btn_comment"
-            android:drawableLeft="@drawable/ic_chat_bubble_outline_black_24dp"
-            android:drawablePadding="16dp"
-            android:drawableTint="@color/primary"
+            android:id="@+id/tv_publication_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comment"
-            android:textColor="@color/primary"
-            android:layout_gravity="center_horizontal" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp">
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/iv_publication_logo"
+            android:text="Eleven Media"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/btn_send"
-            android:drawableLeft="@drawable/ic_send_black_24dp"
-            android:drawablePadding="16dp"
-            android:drawableTint="@color/primary"
+            android:id="@+id/tv_posted_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comment"
-            android:textColor="@color/primary"
-            android:layout_gravity="center_horizontal" />
+            android:layout_alignLeft="@id/tv_publication_title"
+            android:layout_below="@id/tv_publication_title"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/iv_publication_logo"
+            android:text="Posted At: Jan 01 - 6:30AM"
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp" />
 
-    </FrameLayout>
-</LinearLayout>
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/btn_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@id/tv_posted_date"
+            android:padding="8dp"
+            android:src="@drawable/ic_favorite_border_black_36dp"
+            android:tint="@color/primary" />
+
+        <net.aungpyaephyo.mmtextview.components.MMTextView
+            android:id="@+id/tv_news_brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_publication_logo"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="4"
+            android:text="@string/tv_news_details"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_news_bunny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_news_brief"
+            android:src="@drawable/img_news_dummy" />
+
+        <TextView
+            android:id="@+id/lbl_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_news_bunny"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="3 Likes - 3 Comments - Sent to 6 People"
+            android:textColor="@color/primary"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_news_statics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_news_bunny"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/ripple_primary"
+                android:text="4 Likes"
+                android:textColor="@color/primary" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - 5 comments"
+                android:textColor="@color/primary"
+                android:foreground="@drawable/ripple_primary"/>
+
+            <TextView
+                android:id="@+id/tv_send_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - Sent to 3 people"
+                android:textColor="@color/primary"
+                android:foreground="@drawable/ripple_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_news_statics"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:id="@+id/fl_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:foreground="@drawable/ripple_primary">
+
+                <TextView
+                    android:id="@+id/btn_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_chat_bubble_outline_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/primary"
+                    android:text="Comment"
+                    android:textColor="@color/primary" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_send_to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foreground="@drawable/ripple_primary"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/btn_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_send_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/primary"
+                    android:text="Send To"
+                    android:textColor="@color/primary" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

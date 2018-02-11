@@ -4,8 +4,7 @@
     <item
         android:id="@+id/item_all_news"
         android:title="@string/menuAllNews"
-        android:icon="@drawable/ic_fiber_new_color_accent_24dp"
-        />
+        android:icon="@drawable/ic_fiber_new_color_accent_24dp" />
 
     <item
         android:id="@+id/item_news_by_category"

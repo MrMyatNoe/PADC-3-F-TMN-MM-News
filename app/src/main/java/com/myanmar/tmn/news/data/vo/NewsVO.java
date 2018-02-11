@@ -2,6 +2,7 @@ package com.myanmar.tmn.news.data.vo;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,8 +23,11 @@ public class NewsVO {
 
     @SerializedName("publication")
     private PublicationVO publicationVO;
+    @SerializedName("favorites")
     private List<FavouriteVO> favouriteVOs;
+    @SerializedName("comments")
     private List<CommentsVO> commentsVOs;
+    @SerializedName("sent-tos")
     private List<SendTosVO> sendTosVOs;
 
     public String getNewsId() {
@@ -51,14 +55,23 @@ public class NewsVO {
     }
 
     public List<FavouriteVO> getFavouriteVOs() {
+        if ( favouriteVOs == null){
+            favouriteVOs = new ArrayList<>();
+        }
         return favouriteVOs;
     }
 
     public List<CommentsVO> getCommentsVOs() {
+        if (commentsVOs == null){
+            commentsVOs = new ArrayList<>();
+        }
         return commentsVOs;
     }
 
     public List<SendTosVO> getSendTosVOs() {
+        if (sendTosVOs == null){
+            sendTosVOs = new ArrayList<>();
+        }
         return sendTosVOs;
     }
 }

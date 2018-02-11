@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_send_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/send_users"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <TextView
+        android:id="@+id/tv_send_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_toRightOf="@id/tv_send_user"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/send_to"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_received_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_toRightOf="@id/tv_send_to"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/send_users"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <ImageView
+        android:id="@+id/user_send_profile"
+        android:layout_width="@dimen/app_icon_width"
+        android:layout_height="@dimen/app_icon_height"
+        android:layout_below="@id/tv_send_user"
+        android:layout_margin="@dimen/margin_medium"
+        android:src="@drawable/dummy_user_picture" />
+
+    <ImageView
+        android:id="@+id/user_received_profile"
+        android:layout_width="@dimen/app_icon_width"
+        android:layout_height="@dimen/app_icon_height"
+        android:layout_alignLeft="@id/tv_received_user"
+        android:layout_below="@id/tv_received_user"
+        android:layout_marginRight="@dimen/margin_medium_3"
+        android:src="@drawable/dummy_user_picture" />
+</RelativeLayout>

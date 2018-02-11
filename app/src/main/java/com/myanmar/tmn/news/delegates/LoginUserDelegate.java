@@ -7,4 +7,6 @@ package com.myanmar.tmn.news.delegates;
 public interface LoginUserDelegate {
 
     void onTappedLogout();
+
+    void onTapLoginUser();
 }

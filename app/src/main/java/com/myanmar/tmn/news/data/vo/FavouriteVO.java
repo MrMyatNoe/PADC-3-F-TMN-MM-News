@@ -14,6 +14,7 @@ public class FavouriteVO {
     @SerializedName("favorite-date")
     private String favouriteDate;
 
+    @SerializedName("acted-user")
     private ActedUserVO actedUserVO;
 
     public String getFavouriteId() {

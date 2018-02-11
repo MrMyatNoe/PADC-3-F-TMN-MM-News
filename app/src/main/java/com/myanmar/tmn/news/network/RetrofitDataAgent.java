@@ -1,5 +1,7 @@
 package com.myanmar.tmn.news.network;
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 import com.myanmar.tmn.news.event.SuccessLoginEvent;
 import com.myanmar.tmn.news.event.LoadedNewsEvent;
@@ -88,7 +90,7 @@ public class RetrofitDataAgent implements NewsDataAgent {
     }
 
     @Override
-    public void LoginUser(String phone, String password) {
+    public void LoginUser(final Context context, String phone, String password) {
         Call<GetLoginResponse> getLoginResponseCall = newsApi.getLogin(phone,
                 password);
 
@@ -97,7 +99,7 @@ public class RetrofitDataAgent implements NewsDataAgent {
             public void onResponse(Call<GetLoginResponse> call, Response<GetLoginResponse> response) {
                 GetLoginResponse getLoginResponse = response.body();
                 if (getLoginResponse != null) {
-                    EventBus.getDefault().post(new SuccessLoginEvent(getLoginResponse.getLoginUser()));
+                    EventBus.getDefault().post(new SuccessLoginEvent(getLoginResponse.getLoginUser(),context));
                 }
             }
 

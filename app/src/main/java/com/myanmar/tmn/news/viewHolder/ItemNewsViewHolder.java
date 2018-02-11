@@ -43,6 +43,15 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.img_news_bunny)
     ImageView newsBunny;
 
+    @BindView(R.id.tv_likes)
+    TextView tvLikes;
+
+    @BindView(R.id.tv_comment)
+    TextView tvComment;
+
+    @BindView(R.id.tv_send_to)
+    TextView tvSendTo;
+
     private NewsVO mNews;
 
     private NewsActionDelegate actionDelegate;
@@ -57,6 +66,11 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     public void onClick(View view){
        // Toast.makeText(view.getContext(),"Hello",Toast.LENGTH_SHORT).show();
         actionDelegate.onTapNewsItem(mNews);
+    }
+
+    @OnClick(R.id.fl_send_to)
+    public void onTapSendTo(View view){
+        actionDelegate.onTapSendToButton(mNews);
     }
 
     //add for one view
@@ -76,5 +90,30 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
         } else {
             newsBunny.setVisibility(View.GONE);
         }
+        tvLikes.setText(tvLikes.getContext().getResources().getString(R.string.format_like_users,news.getFavouriteVOs().size()));
+        tvComment.setText(tvLikes.getContext().getResources().getString(R.string.format_comment_users,news.getCommentsVOs().size()));
+        tvSendTo.setText(tvSendTo.getContext().getResources().getString(R.string.format_send_to_users,news.getSendTosVOs().size()));
     }
+
+    @OnClick(R.id.tv_likes)
+    public void onTappedLikeUser(View view){
+        actionDelegate.onTapLikeUsers(mNews);
+    }
+
+    @OnClick(R.id.tv_comment)
+    public void onTappedCommentUser(View view){
+        actionDelegate.onTapCommentUsers(mNews);
+    }
+
+    @OnClick(R.id.tv_send_to)
+    public void onTappedSendToUser(View view){
+        actionDelegate.onTapSendToButton(mNews);
+    }
+
+    @OnClick(R.id.fl_comment)
+    public void onTappedComment(View view){
+        actionDelegate.onTapCommentButton();
+    }
+
 }
+
